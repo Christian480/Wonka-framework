@@ -9,7 +9,10 @@ $router->get('/', function () {
 });
 
 $router->get('/contact', function () {
-    echo "Page Contact";
+    echo "Page Contact du framework Wonka";
 });
 
-$router->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
+$router->dispatch(
+    $_SERVER['REQUEST_METHOD'],
+    $_SERVER['REQUEST_URI']
+);
