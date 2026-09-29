@@ -1,0 +1,10 @@
+Options -MultiViews
+
+RewriteEngine On
+
+# La racine du site passe par le framework
+RewriteRule ^$ public/index.php [L]
+
+# Toutes les autres URLs passent par le framework,
+# sauf les ressources situées dans public/
+RewriteRule ^(?!public/).* public/index.php [L]
