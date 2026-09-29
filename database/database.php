@@ -1,6 +1,6 @@
 <?php
 
-require_once '/index.php';
+require_once __DIR__ . '/../index.php';
 
 try {
 
@@ -185,3 +185,4 @@ try {
     echo "Erreur lors de la création de la base : "
         . htmlspecialchars($e->getMessage());
 }
+var_dump($pdo->query("SELECT * FROM categories")->fetchAll());

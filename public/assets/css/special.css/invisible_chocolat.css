@@ -1,0 +1,66 @@
+@keyframes brille{0%,100%{filter:brightness(1)}50%{filter:brightness(1.18) saturate(1.25)}}
+section{padding:36px 0}
+.panel{background:#fff6e5;border:5px solid #3a0f52;border-radius:26px;box-shadow:10px 10px 0 #8a97b8;padding:26px;margin:0 0 26px}
+.panel.vert{box-shadow:10px 10px 0 #41e0a3}
+.panel.jaune{box-shadow:10px 10px 0 #ffd166}
+.panel.rose{box-shadow:10px 10px 0 #ff5d8f}
+.titre{font-size:clamp(24px,4.2vw,40px);margin:0 0 8px;color:#3a0f52;text-shadow:3px 3px 0 #ffd166}
+.sous-titre{font-size:15px;margin:0 0 20px;color:#4b5a8a}
+hr.bonbon{border:0;height:8px;background:repeating-linear-gradient(90deg,#ff5d8f 0 16px,#ffd166 16px 32px,#41e0a3 32px 48px,#8ad7f2 48px 64px);border-radius:8px;margin:24px 0}
+.badge{display:inline-block;background:#ff5d8f;color:#fff6e5;border:3px solid #3a0f52;border-radius:999px;padding:3px 11px;font-size:11px;text-transform:uppercase;letter-spacing:1px;box-shadow:3px 3px 0 #3a0f52}
+.badge.vert{background:#41e0a3;color:#123a2c}
+.badge.jaune{background:#ffd166;color:#5a3a00}
+.badge.bleu{background:#8ad7f2;color:#0b3d4d}
+.badge.clignote{animation:clignote 1s steps(2) infinite}
+@keyframes clignote{50%{opacity:.25}}
+.fiche{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:820px){.fiche{grid-template-columns:330px 1fr}}
+.gros-visuel{background:#eceff3;border:5px dashed #8a97b8;border-radius:22px;height:260px;display:flex;align-items:center;justify-content:center;font-size:120px;box-shadow:10px 10px 0 #8a97b8;position:relative;overflow:hidden}
+.gros-visuel span{opacity:.14;animation:apparait 5s ease-in-out infinite}
+@keyframes apparait{0%,100%{opacity:.1}50%{opacity:.32}}
+.gros-visuel .etiq{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:12px;color:#6b7897;text-transform:uppercase;letter-spacing:2px}
+.prix{font-size:38px;color:#c1121f;margin:8px 0}
+.carac{width:100%;border-collapse:collapse;background:#fff;border:4px solid #3a0f52;border-radius:16px;overflow:hidden}
+.carac th,.carac td{border-bottom:2px dotted #c99;padding:9px 12px;text-align:left;font-size:14px;vertical-align:top}
+.carac th{background:#eceff3;width:44%;font-family:Verdana,sans-serif;font-weight:bold;color:#3a0f52}
+.avertissement{background:#fff3cd;border:4px dashed #c1121f;border-radius:16px;padding:14px 16px;margin:16px 0;font-weight:bold}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.carte{background:#fff;border:4px solid #3a0f52;border-radius:20px;padding:16px;box-shadow:7px 7px 0 #3a0f52;transition:transform .18s,box-shadow .18s}
+.carte:hover{transform:translate(-4px,-4px) rotate(-1deg);box-shadow:12px 12px 0 #8a97b8}
+.carte h3{margin:6px 0 4px;font-size:19px}
+.carte .visuel{height:96px;border-radius:14px;border:3px dashed #3a0f52;display:flex;align-items:center;justify-content:center;font-size:44px;margin-bottom:8px}
+.faq details{background:#fff;border:3px solid #3a0f52;border-radius:14px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:bold;padding:12px 14px;background:#eceff3;border-radius:10px}
+.faq details[open] summary{background:#ffd166}
+.faq p{padding:6px 14px 14px;margin:0}
+footer.site{background:#3a0f52;color:#ffe8f0;border-top:7px solid #ffd166;padding:34px 16px 20px;margin-top:40px}
+footer.site .colonnes{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:1100px;margin:0 auto}
+footer.site h4{color:#ffd166;font-size:18px;margin:0 0 8px}
+footer.site a{color:#8ad7f2}
+footer.site .absurde{max-width:1100px;margin:22px auto 0;font-size:12px;font-style:italic;color:#d8b6ea;border-top:2px dotted #8a35a8;padding-top:12px}
+.fil{font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:40px 0 0;color:#4b5a8a}
+.fil a{color:#3a0f52}
+.visuel{position:relative}.visuel .badge{position:absolute;top:4px;left:4px;z-index:1;font-size:10px;padding:2px 8px}/* refonte commune des fiches produits */
+.fiche-intro{padding:34px 0 24px}
+.fiche{display:grid;grid-template-columns:minmax(300px,.88fr) minmax(0,1.12fr);gap:52px;align-items:center;margin:0 0 26px}
+.fiche > div:first-child{padding:12px 16px 12px 0}
+.fiche > div:last-child{padding:14px 0 14px 12px}
+.gros-visuel{min-height:340px;height:auto;position:relative;overflow:hidden}
+.gros-visuel:before{content:"";position:absolute;width:210px;height:210px;border:3px solid rgba(255,255,255,.55);border-radius:50%;top:-58px;right:-42px;box-shadow:0 0 0 22px rgba(255,255,255,.12),0 0 0 44px rgba(255,255,255,.08)}
+.gros-visuel > svg,.gros-visuel > span{position:relative;z-index:1}
+.fiche .prix{font-size:clamp(34px,4vw,48px);margin:14px 0}
+.fiche .btn{margin-top:4px}
+.fiche-intro + hr{margin:14px 0 44px}
+.fiche-intro + section{padding-top:0}
+.fiche-intro + section > .panel{margin-bottom:38px}
+.grille{gap:28px}
+.carte{height:100%;display:flex;flex-direction:column}
+.carte .btn{margin-top:auto;align-self:flex-start}
+@media(max-width:820px){.fiche{grid-template-columns:1fr;gap:28px}.fiche > div:first-child,.fiche > div:last-child{padding:0}.gros-visuel{min-height:280px}.fiche-intro{padding-top:24px}}
+@media(max-width:560px){.fiche .btn{width:100%;margin:8px 0 0}.fiche .btn + .btn{margin-left:0}.fiche-intro + hr{margin:0 0 34px}}
+/* respiration supplÃ©mentaire entre les blocs */
+.fiche-intro{padding-bottom:42px}
+.fiche-intro + hr{margin-top:24px;margin-bottom:58px}
+.fiche-intro + section > .panel{margin-bottom:48px}
+.panel{margin-bottom:42px}
+.grille{margin-top:26px}
